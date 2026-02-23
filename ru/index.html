@@ -112,15 +112,7 @@
       </p>
       <div class="lead-capture">
         <h3>ОСТАВЬТЕ ВАШ EMAIL И МЫ С ВАМИ СВЯЖЕМСЯ</h3>
-        <form
-          class="lead-form"
-          action="https://formsubmit.co/contact@67rd.com"
-          method="POST"
-        >
-          <input type="hidden" name="_subject" value="Новая заявка с сайта" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="./#contact" />
+        <form class="lead-form" data-lang="ru">
           <input class="lead-input" type="email" name="replyEmail" placeholder="Ваш email" required />
           <button type="submit" class="btn btn-accent">ОТПРАВИТЬ</button>
         </form>
@@ -133,5 +125,7 @@
     <a class="footer-mail" href="mailto:contact@67rd.com">contact@67rd.com</a>
     <span>РЕШЕНИЯ ДЛЯ МАЛОГО БИЗНЕСА</span>
   </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="../email-handler.js"></script>
 </body>
 </html>

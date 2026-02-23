@@ -425,6 +425,20 @@ li {
   text-decoration: underline;
 }
 
+.success-message,
+.error-message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.success-message {
+  color: var(--accent);
+}
+
+.error-message {
+  color: #ff7a7a;
+}
+
 [dir="rtl"] .topbar {
   flex-direction: row-reverse;
 }

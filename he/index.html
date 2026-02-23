@@ -111,15 +111,7 @@
       </p>
       <div class="lead-capture">
         <h3>השאירו אימייל ונחזור אליכם</h3>
-        <form
-          class="lead-form"
-          action="https://formsubmit.co/contact@67rd.com"
-          method="POST"
-        >
-          <input type="hidden" name="_subject" value="פנייה חדשה מהאתר" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="./#contact" />
+        <form class="lead-form" data-lang="he">
           <input class="lead-input" type="email" name="replyEmail" placeholder="האימייל שלכם" required />
           <button type="submit" class="btn btn-accent">שליחה</button>
         </form>
@@ -132,5 +124,7 @@
     <a class="footer-mail" href="mailto:contact@67rd.com">contact@67rd.com</a>
     <span>פתרונות לעסקים קטנים</span>
   </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="../email-handler.js"></script>
 </body>
 </html>
