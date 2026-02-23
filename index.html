@@ -15,9 +15,9 @@
     <div class="header-side">
       <div class="tag">DIGITAL SOLUTIONS<br />FOR SMALL BUSINESSES</div>
       <nav class="lang-switch" aria-label="Language switcher">
-        <a class="lang-link active" href="index.html">EN</a>
-        <a class="lang-link" href="ru.html">RU</a>
-        <a class="lang-link" href="he.html">HE</a>
+        <a class="lang-link active" href="/">EN</a>
+        <a class="lang-link" href="ru/">RU</a>
+        <a class="lang-link" href="he/">HE</a>
       </nav>
     </div>
   </header>
@@ -108,13 +108,29 @@
       <p>
         Send one short description of the process that slows your team down.
         You get a quick review with practical next steps and a suggested setup.
+        <a class="inline-mail" href="mailto:contact@67rd.com">contact@67rd.com</a>
       </p>
-      <a class="btn btn-accent" href="mailto:contact@67rd.com">contact@67rd.com</a>
+      <div class="lead-capture">
+        <h3>LEAVE YOUR EMAIL AND WE WILL GET BACK TO YOU</h3>
+        <form
+          class="lead-form"
+          action="https://formsubmit.co/contact@67rd.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="New website inquiry" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="#contact" />
+          <input class="lead-input" type="email" name="replyEmail" placeholder="your@email.com" required />
+          <button type="submit" class="btn btn-accent">SEND</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     <span>ROAD67 LAB</span>
+    <a class="footer-mail" href="mailto:contact@67rd.com">contact@67rd.com</a>
     <span>SOLUTIONS FOR SMALL BUSINESSES</span>
   </footer>
 </body>
