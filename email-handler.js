@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         to_email: "contact@67rd.com",
         from_email: emailInput.value.trim(),
         subject: cfg.subject,
-        message: cfg.messagePrefix + emailInput.value.trim(),
+        message: "Source: 67rd\n" + cfg.messagePrefix + emailInput.value.trim(),
       };
 
       emailjs
