@@ -63,7 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const templateParams = {
         to_email: "contact@67rd.com",
         from_email: emailInput.value.trim(),
-        subject: cfg.subject,
+        subject: "[67rd] " + cfg.subject,
+        source: "67rd",
+        project: "67rd",
         message: "Source: 67rd\n" + cfg.messagePrefix + emailInput.value.trim(),
       };
 
