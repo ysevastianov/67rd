@@ -1,7 +1,7 @@
 // Email.js configuration mirrored from twiddl approach.
 const emailjsConfig = {
   publicKey: "N1FpZBJr30Yt8HVFl",
-  serviceId: "service_s4demlz",
+  serviceId: "service_2sipadk",
   templateId: "template_xay64zb",
 };
 
