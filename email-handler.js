@@ -1,13 +1,4 @@
-// Email.js configuration mirrored from twiddl approach.
-const emailjsConfig = {
-  publicKey: "N1FpZBJr30Yt8HVFl",
-  serviceId: "service_2sipadk",
-  templateId: "template_xay64zb",
-};
-
-(function () {
-  emailjs.init(emailjsConfig.publicKey);
-})();
+const FORMSUBMIT_AJAX_URL = "https://formsubmit.co/ajax/contact@67rd.com";
 
 const langConfig = {
   en: {
@@ -60,17 +51,28 @@ document.addEventListener("DOMContentLoaded", function () {
       submitButton.disabled = true;
       submitButton.textContent = cfg.sending;
 
-      const templateParams = {
-        to_email: "contact@67rd.com",
-        from_email: emailInput.value.trim(),
-        subject: "[67rd] " + cfg.subject,
-        source: "67rd",
-        project: "67rd",
+      const payload = {
+        email: emailInput.value.trim(),
+        name: "67rd website form",
+        _subject: "[67rd] " + cfg.subject,
         message: "Source: 67rd\n" + cfg.messagePrefix + emailInput.value.trim(),
+        _captcha: "false",
       };
 
-      emailjs
-        .send(emailjsConfig.serviceId, emailjsConfig.templateId, templateParams)
+      fetch(FORMSUBMIT_AJAX_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Request failed");
+          }
+          return response.json();
+        })
         .then(function () {
           emailInput.value = "";
           submitButton.textContent = cfg.sent;
